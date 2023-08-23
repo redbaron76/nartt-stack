@@ -16,7 +16,7 @@ Then, push the schema and create the database:
 npx drizzle-kit push:sqlite
 ```
 
-### Prisma
+### Using Prisma
 
 First, create db migrations for SQLite with Prisma:
 
@@ -27,6 +27,10 @@ npx prisma migrate dev
 ### tRPC db context
 
 Now, set the `db` context variable (`prisma` or `drizzle`) in `/src/client/trpc/index.ts` and `/src/server/api/trpc.ts`.
+
+### Code cleanup
+
+Feel free to remove any `drizzle` or `prisma` reference from the codebase when not used and remove unused packages from package.json dependencies.
 
 ### Run the server
 
