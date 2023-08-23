@@ -1,15 +1,18 @@
 import { initTRPC } from "@trpc/server";
 import { type FetchCreateContextFnOptions } from "@trpc/server/adapters/fetch";
-import superjson from "superjson";
 import { ZodError } from "zod";
 
-import { drizzle } from "@/server/db";
+import superjson from "superjson";
+
+// import { drizzle } from "@/server/db/drizzle";
+import { prisma } from "@/server/db/prisma";
 
 type CreateContextOptions = Record<string, never>;
 
 const createInnerTRPCContext = (_opts: CreateContextOptions) => {
   return {
-    db: drizzle,
+    // db: drizzle,
+    db: prisma,
   };
 };
 

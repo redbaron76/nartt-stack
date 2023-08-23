@@ -1,0 +1,13 @@
+{
+  "version": "5",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1692715601792,
+      "tag": "0000_optimal_surge",
+      "breakpoints": true
+    }
+  ]
+}

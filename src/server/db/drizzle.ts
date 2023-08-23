@@ -9,6 +9,6 @@ const globalForDrizzle = globalThis as unknown as {
 };
 
 export const drizzle =
-  globalForDrizzle.drizzle ?? initDrizzle(new Database("sqlite.db"));
+  globalForDrizzle.drizzle ?? initDrizzle(new Database("./drizzle/sqlite.db"));
 
 if (process.env.NODE_ENV !== "production") globalForDrizzle.drizzle = drizzle;

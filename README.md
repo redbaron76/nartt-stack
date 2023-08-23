@@ -2,6 +2,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+### Using Drizzle
+
 First, create db migrations for SQLite with Drizzle-Kit:
 
 ```bash
@@ -14,7 +16,19 @@ Then, push the schema and create the database:
 npx drizzle-kit push:sqlite
 ```
 
-Now, run the development server:
+### Prisma
+
+First, create db migrations for SQLite with Prisma:
+
+```bash
+npx prisma migrate dev
+```
+
+### tRPC db context
+
+Now, set the `db` context variable (`prisma` or `drizzle`) in `/src/client/trpc/index.ts` and `/src/server/api/trpc.ts`.
+
+### Run the server
 
 ```bash
 npm run dev
