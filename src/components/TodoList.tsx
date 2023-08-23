@@ -1,7 +1,8 @@
 "use client";
-import { trpc } from "@/client/trpc";
-import { useState } from "react";
+
+import { trpc } from "@/utils/trpc";
 import { trpcServer } from "@/server/trpc";
+import { useState } from "react";
 
 type TodoListProps = {
   initialTodos: Awaited<ReturnType<(typeof trpcServer)["todo"]["getTodos"]>>;
